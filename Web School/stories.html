@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories - Lets Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/lg.png" alt="Logo" class="me-2">
+                <span class="fw-bold fs-4">Lets Code</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="stories.html">Stories</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="nav-link">Log in</a>
+                    <a href="signup.html" class="btn btn-outline-custom">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Success Stories</h1>
+            <p class="text-muted fs-5">Hear from the people who have transformed their lives through coding.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Story 1 -->
+            <div class="col-md-4">
+                <div class="card custom-card h-100">
+                    <img src="assets/images/images.jpeg" class="card-img-top" alt="Kunal Kushwaha" style="height: 250px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Kunal Kushwaha</h5>
+                        <p class="card-text text-muted">A dedicated mentor and developer who has inspired thousands to start their coding journey through open source and community building.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="col-md-4">
+                <div class="card custom-card h-100">
+                    <img src="assets/images/images (1).jpg" class="card-img-top" alt="Apna College" style="height: 250px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Apna College</h5>
+                        <p class="card-text text-muted">Empowering students with industry-relevant skills and helping them land their dream jobs at top tech companies worldwide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story 3 -->
+            <div class="col-md-4">
+                <div class="card custom-card h-100">
+                    <img src="assets/images/egor.jpeg" class="card-img-top" alt="Egor" style="height: 250px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <h5 class="card-title fw-bold">Egor</h5>
+                        <p class="card-text text-muted">Proving that with consistency and the right resources, anyone can master complex programming concepts and build amazing software.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; <span id="currentYear"></span> Lets Code. All rights reserved.</p>
+            <p id="currentDate" class="small text-muted"></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const now = new Date();
+            document.getElementById("currentYear").textContent = now.getFullYear();
+            document.getElementById("currentDate").textContent = now.toDateString();
+        });
+    </script>
+</body>
+</html>

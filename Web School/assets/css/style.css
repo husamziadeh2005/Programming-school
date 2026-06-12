@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff6600 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f1f1 100%);
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-section h3 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 600;
+    border: 2px solid #333;
+    transition: all 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: white;
+    color: #333;
+}
+
+.btn-outline-custom {
+    border: 2px solid #333;
+    color: #333;
+    border-radius: 25px;
+    padding: 8px 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Cards */
+.custom-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    background: white;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: contain;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+}
+
+.footer-link {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ff6600;
+}
+
+/* Login/Signup Containers */
+.auth-container {
+    max-width: 450px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.auth-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+}

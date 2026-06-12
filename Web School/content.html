@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Lets Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/lg.png" alt="Logo" class="me-2">
+                <span class="fw-bold fs-4">Lets Code</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stories.html">Stories</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="nav-link">Log in</a>
+                    <a href="signup.html" class="btn btn-outline-custom">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Explore Our Courses</h1>
+            <p class="text-muted fs-5">Choose from a wide range of programming languages and technologies.</p>
+        </div>
+
+        <div class="row g-4" id="courseContainer">
+            <!-- Courses will be populated here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; <span id="currentYear"></span> Lets Code. All rights reserved.</p>
+            <p id="currentDate" class="small text-muted"></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const courses = [
+            { name: "Python", img: "Python.png", link: "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V&si=AYaK3ttn64dFjBiK" },
+            { name: "Java", img: "Java_programming_language_logo.svg.png", link: "https://youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&si=ma48RJXWttRPqWSA" },
+            { name: "C++", img: "C++_Logo.svg.png", link: "https://youtube.com/playlist?list=PLCInYL3l2AajFAiw4s1U4QbGszcQ-rAb3&si=eyQR8iFISyxaVGfG" },
+            { name: "HTML", img: "HTML.png", link: "https://elzero.org/study/html-2021-study-plan/" },
+            { name: "CSS", img: "css.png", link: "https://nouvil.net/courses/css/" },
+            { name: "JavaScript", img: "JavaScript.png", link: "https://www.javascripttutorial.net/es6/javascript-promises/" },
+            { name: "C#", img: "C-image.png", link: "https://www.youtube.com/watch?v=GhQdlIFylQ8&t=1s" },
+            { name: "Flutter", img: "flutter.jpg", link: "https://youtube.com/playlist?list=PLw6Y5u47CYq47oDw63bMqkq06fjuoK_GJ&si=2H4XzacO1M1Yjs7d" },
+            { name: "PHP", img: "PHP.png", link: "https://elzero.org/study/php-bootcamp-2022-study-plan/" },
+            { name: "Linux", img: "linux.jpg", link: "https://youtu.be/sWbUDq4S6Y8?si=Lfrn7_1bvZJNI7fK" },
+            { name: "SQL", img: "SQL.png", link: "https://youtube.com/playlist?list=PLTChhmU8tbQzrdP79gFX6h4TXu-gOUDvp&si=23eZcX79Eu7SABPW" },
+            { name: "DSA", img: "dsa.png", link: "https://youtube.com/playlist?list=PLAXnLdrLnQpRcveZTtD644gM9uzYqJCwr&si=oH0vWkWibn12MXXT" }
+        ];
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById("courseContainer");
+            courses.forEach(course => {
+                const col = document.createElement("div");
+                col.className = "col-lg-3 col-md-4 col-sm-6";
+                col.innerHTML = `
+                    <div class="card custom-card h-100 text-center p-3">
+                        <img src="assets/images/${course.img}" class="card-img-top mx-auto" alt="${course.name}">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">${course.name}</h5>
+                            <a href="${course.link}" target="_blank" class="btn btn-primary-custom mt-2">Learn More</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+
+            const now = new Date();
+            document.getElementById("currentYear").textContent = now.getFullYear();
+            document.getElementById("currentDate").textContent = now.toDateString();
+        });
+    </script>
+</body>
+</html>

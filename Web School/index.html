@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Code - Learn Programming</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/lg.png" alt="Logo" class="me-2">
+                <span class="fw-bold fs-4">Lets Code</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stories.html">Stories</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="login.html" class="nav-link">Log in</a>
+                    <a href="signup.html" class="btn btn-outline-custom">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4">Tech, Programming, Coding!</h1>
+                    <p class="lead mb-4">The highest-quality courses offered through the most engaging learning platform.</p>
+                    <div class="d-flex justify-content-center gap-3 mb-5">
+                        <a href="content.html" class="btn btn-primary-custom">Browse Courses</a>
+                    </div>
+                    
+                    <!-- Search Bar -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <form id="searchForm" class="input-group input-group-lg shadow-sm">
+                                <input type="search" id="searchInput" class="form-control border-0 rounded-start-pill ps-4" placeholder="Search for courses (e.g. Python, Java)..." aria-label="Search">
+                                <button class="btn btn-dark rounded-end-pill px-4" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Community Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <img src="assets/images/prog.jpg" alt="Programming Community" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-md-6 ps-md-5">
+                    <h2 class="fw-bold mb-3">Join Our Community</h2>
+                    <p class="fs-5 text-muted">Join a community of learners and innovators and make yourself a great programmer. We provide the tools and support you need to succeed.</p>
+                </div>
+            </div>
+
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-md-6">
+                    <img src="assets/images/picprog.jpeg" alt="Level Up Skills" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-md-6 pe-md-5">
+                    <h2 class="fw-bold mb-3">Level Up Your Skills</h2>
+                    <p class="fs-5 text-muted">Start from scratch and level up your coding skills today. Our curriculum is designed to take you from beginner to expert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/images/lg.png" alt="Logo" width="40" class="me-2 rounded-circle">
+                        <span class="fw-bold fs-5">Lets Code</span>
+                    </div>
+                    <p class="text-muted">Empowering the next generation of developers through quality education.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Most Popular</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V" class="footer-link">Python</a></li>
+                        <li><a href="https://www.javascripttutorial.net/es6/javascript-promises/" class="footer-link">JavaScript</a></li>
+                        <li><a href="https://youtube.com/playlist?list=PLw6Y5u47CYq47oDw63bMqkq06fjuoK_GJ&si=2H4XzacO1M1Yjs7d" class="footer-link">Flutter</a></li>
+                        <li><a href="https://youtu.be/sWbUDq4S6Y8?si=Lfrn7_1bvZJNI7fK" class="footer-link">Linux</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://pll.harvard.edu/course/cs50s-introduction-programming-python" class="footer-link">Harvard CS50</a></li>
+                        <li><a href="https://www.apnacollege.in/" class="footer-link">Apna College</a></li>
+                        <li><a href="https://www.freecodecamp.org/" class="footer-link">freeCodeCamp</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">About</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="footer-link">My Info</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted pb-3">
+                <p>&copy; <span id="currentYear"></span> Lets Code. All rights reserved.</p>
+                <p id="currentDate" class="small"></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Search Functionality
+        const languageLinks = {
+            "python": "https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V&si=AYaK3ttn64dFjBiK",
+            "java": "https://youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop&si=ma48RJXWttRPqWSA",
+            "c++": "https://youtube.com/playlist?list=PLCInYL3l2AajFAiw4s1U4QbGszcQ-rAb3&si=eyQR8iFISyxaVGfG",
+            "html": "https://elzero.org/study/html-2021-study-plan/",
+            "css": "https://nouvil.net/courses/css/",
+            "javascript": "https://www.javascripttutorial.net/es6/javascript-promises/",
+            "c#": "https://www.youtube.com/watch?v=GhQdlIFylQ8&t=1s",
+            "flutter": "https://youtube.com/playlist?list=PLw6Y5u47CYq47oDw63bMqkq06fjuoK_GJ&si=2H4XzacO1M1Yjs7d",
+            "php": "https://elzero.org/study/php-bootcamp-2022-study-plan/",
+            "linux": "https://youtu.be/sWbUDq4S6Y8?si=Lfrn7_1bvZJNI7fK",
+            "sql": "https://youtube.com/playlist?list=PLTChhmU8tbQzrdP79gFX6h4TXu-gOUDvp&si=23eZcX79Eu7SABPW",
+            "dsa": "https://youtube.com/playlist?list=PLAXnLdrLnQpRcveZTtD644gM9uzYqJCwr&si=oH0vWkWibn12MXXT"
+        };
+
+        document.getElementById("searchForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const query = document.getElementById("searchInput").value.trim().toLowerCase();
+            if (languageLinks[query]) {
+                window.location.href = languageLinks[query];
+            } else {
+                alert("Course not found! Try: Python, Java, HTML, etc.");
+            }
+        });
+
+        // Date functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const now = new Date();
+            document.getElementById("currentYear").textContent = now.getFullYear();
+            document.getElementById("currentDate").textContent = now.toDateString();
+        });
+    </script>
+</body>
+</html>
