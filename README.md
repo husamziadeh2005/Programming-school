@@ -173,11 +173,5 @@ or simply launch the file in your preferred browser.
 ---
 
 ## Author
-
-Developed as a web development project focused on educational technology and user experience design.
-
----
-
-## License
-
-This project is available for educational and learning purposes.
+Husam Ziadeh 
+Computer Science 
