@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to Lets Code and continue learning.">
+  <title>Sign in | Lets Code</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-intro" aria-label="Lets Code introduction">
+      <a class="auth-brand" href="index.html" aria-label="Lets Code home"><img src="assets/images/lg.png"
+          alt="Lets Code logo"><span>Lets Code</span></a>
+      <div class="auth-intro-copy"><span class="auth-eyebrow"><i class="fa-solid fa-sparkles"></i> Learn. Build.
+          Grow.</span>
+        <h1>Your next line of code starts here.</h1>
+        <p>Pick up where you left off and keep building skills that turn ideas into reality.</p>
+      </div>
+      <div class="auth-feature"><i class="fa-solid fa-code"></i><span>Practical lessons for every level</span></div>
+    </section>
+    <section class="auth-panel" aria-labelledby="login-heading">
+      <div class="auth-card">
+        <a class="auth-mobile-brand" href="index.html"><img src="assets/images/lg.png" alt="Lets Code logo"> Lets
+          Code</a>
+        <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to home</a>
+        <div class="auth-heading">
+          <h2 id="login-heading">Welcome back</h2>
+          <p>Enter your details to continue learning.</p>
+        </div>
+        <div id="loginAlert" class="alert auth-alert" role="alert" aria-live="polite" hidden></div>
+        <form id="loginForm" novalidate>
+          <div class="mb-3"><label for="username" class="form-label">Email or username</label>
+            <div class="field-wrap"><i class="fa-regular fa-user field-icon"></i><input type="text" class="form-control"
+                id="username" name="username" autocomplete="username" placeholder="you@example.com" required
+                minlength="3" aria-describedby="usernameFeedback"></div>
+            <div id="usernameFeedback" class="invalid-feedback">Enter at least 3 characters.</div>
+          </div>
+          <div class="mb-2">
+            <div class="d-flex justify-content-between align-items-center"><label for="password"
+                class="form-label">Password</label><button class="link-button" type="button" data-bs-toggle="modal"
+                data-bs-target="#resetModal">Forgot password?</button></div>
+            <div class="field-wrap"><i class="fa-solid fa-lock field-icon"></i><input type="password"
+                class="form-control" id="password" name="password" autocomplete="current-password"
+                placeholder="Enter your password" required minlength="6"
+                aria-describedby="passwordFeedback capsLockHint"><button class="password-toggle" type="button"
+                aria-label="Show password" aria-pressed="false"><i class="fa-regular fa-eye"></i></button></div>
+            <div id="passwordFeedback" class="invalid-feedback">Your password must be at least 6 characters.</div>
+            <p id="capsLockHint" class="caps-lock-hint" hidden><i class="fa-solid fa-triangle-exclamation"></i> Caps
+              Lock is on</p>
+          </div>
+          <div class="remember-row">
+            <div class="form-check"><input type="checkbox" class="form-check-input" id="rememberMe"><label
+                class="form-check-label" for="rememberMe">Keep me signed in</label></div>
+          </div>
+          <button id="loginButton" type="submit" class="btn auth-submit w-100"><span class="button-text">Sign
+              in</span><span class="button-spinner spinner-border spinner-border-sm" aria-hidden="true"
+              hidden></span></button>
+        </form>
+        <p class="auth-switch">New to Lets Code? <a href="SignUp.html">Create an account</a></p>
+        <p class="auth-note"><i class="fa-solid fa-shield-halved"></i> This demo validates your form in the browser.</p>
+      </div>
+    </section>
+  </main>
+  <div class="modal fade" id="resetModal" tabindex="-1" aria-labelledby="resetModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content reset-modal">
+        <div class="modal-body p-4 p-sm-5"><button type="button" class="btn-close float-end" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+          <div class="reset-icon"><i class="fa-solid fa-key"></i></div>
+          <h2 id="resetModalTitle">Reset your password</h2>
+          <p class="text-muted">Enter your account email and we’ll show you a demo confirmation.</p>
+          <form id="resetForm" novalidate><label for="resetEmail" class="form-label">Email address</label><input
+              type="email" class="form-control mb-3" id="resetEmail" placeholder="you@example.com" required
+              autocomplete="email">
+            <div id="resetFeedback" class="invalid-feedback mb-3">Enter a valid email address.</div><button
+              type="submit" class="btn auth-submit w-100">Send reset link</button>
+          </form>
+          <p id="resetSuccess" class="reset-success mt-3 mb-0" hidden></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.getElementById('loginForm'), username = document.getElementById('username'), password = document.getElementById('password'), submitButton = document.getElementById('loginButton'), alertBox = document.getElementById('loginAlert'), capsLockHint = document.getElementById('capsLockHint');
+    function showAlert(message, type) { alertBox.textContent = message; alertBox.className = `alert auth-alert alert-${type}`; alertBox.hidden = false; }
+    document.querySelector('.password-toggle').addEventListener('click', function () { const hidden = password.type === 'password'; password.type = hidden ? 'text' : 'password'; this.setAttribute('aria-label', hidden ? 'Hide password' : 'Show password'); this.setAttribute('aria-pressed', String(hidden)); this.querySelector('i').className = hidden ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye'; });
+    password.addEventListener('keyup', event => { capsLockHint.hidden = !event.getModifierState('CapsLock'); }); password.addEventListener('blur', () => { capsLockHint.hidden = true; });
+    [username, password].forEach(field => field.addEventListener('input', () => { field.classList.remove('is-invalid'); alertBox.hidden = true; }));
+    form.addEventListener('submit', event => { event.preventDefault(); form.classList.add('was-validated'); if (!form.checkValidity()) { [username, password].forEach(field => { if (!field.validity.valid) field.classList.add('is-invalid'); }); showAlert('Please check the highlighted fields and try again.', 'danger'); return; } submitButton.disabled = true; submitButton.querySelector('.button-text').textContent = 'Signing you in…'; submitButton.querySelector('.button-spinner').hidden = false; const session = { name: username.value.trim(), signedInAt: new Date().toISOString() }; const storage = document.getElementById('rememberMe').checked ? localStorage : sessionStorage; storage.setItem('letsCodeSession', JSON.stringify(session)); window.setTimeout(() => { window.location.href = 'index.html'; }, 650); });
+    document.getElementById('resetForm').addEventListener('submit', function (event) { event.preventDefault(); const email = document.getElementById('resetEmail'), feedback = document.getElementById('resetFeedback'); if (!email.checkValidity()) { email.classList.add('is-invalid'); feedback.style.display = 'block'; return; } email.classList.remove('is-invalid'); feedback.style.display = 'none'; const success = document.getElementById('resetSuccess'); success.textContent = `Demo request received for ${email.value}. In a live site, a reset link would be sent.`; success.hidden = false; });
+  </script>
+</body>
+
+</html>
