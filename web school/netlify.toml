@@ -1,0 +1,8 @@
+# Base directory is "web school" (set in the Netlify UI); publish is relative to it.
+[build]
+  publish = "."
+
+# This is a plain static HTML site, not a Next.js app. The Next.js plugin is
+# enabled in the Netlify UI, so tell it to skip itself.
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
